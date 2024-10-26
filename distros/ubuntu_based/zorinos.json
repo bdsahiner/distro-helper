@@ -1,0 +1,44 @@
+{
+    "name": "Zorin OS",
+    "version": "17.2",
+    "base": "Ubuntu",
+    "release_date": "2023-08-01",
+    "desktop_environment": {
+      "name": "GNOME",
+      "latest_version": "42",
+      "customization_allowance": "limited"
+    },
+    "requirements": {
+      "ram_min_gb": 2,
+      "ram_rec_gb": 4,
+      "cpu_min": "Dual-core 1 GHz",
+      "cpu_rec": "Dual-core 2 GHz",
+      "storage_min_gb": 20,
+      "storage_rec_gb": 50,
+      "gpu_min": "Intel HD Graphics or equivalent",
+      "gpu_rec": "Dedicated GPU with 1 GB VRAM"
+    },
+    "package_managers": [
+      { "name": "APT" },
+      { "name": "Snap" }
+    ],
+    "architectures": [
+      { "arch_name": "x86_64" }
+    ],
+    "release_models": [
+      {
+        "model_type": "Point Release",
+        "update_frequency": "Varies"
+      }
+    ],
+    "categories": [
+      { "name": "Daily Use" },
+      { "name": "Education/Office" },
+      { "name": "Accessibility for Disabled People" }
+    ],
+    "license": {
+      "type": "GPL and proprietary",
+      "is_open_source": true
+    }
+  }
+  

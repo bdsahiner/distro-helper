@@ -1,0 +1,49 @@
+{
+    "name": "Debian",
+    "version": "12",
+    "codename": "Bookworm",
+    "base": "Independent",
+    "release_date": "2023-06-10",
+    "desktop_environment": {
+      "name": "GNOME",
+      "latest_version": "43",
+      "customization_allowance": "limited"
+    },
+    "requirements": {
+      "ram_min_gb": 2,
+      "ram_rec_gb": 4,
+      "cpu_min": "Dual-core 1 GHz",
+      "cpu_rec": "Dual-core 2 GHz",
+      "storage_min_gb": 10,
+      "storage_rec_gb": 20,
+      "gpu_min": "Intel HD Graphics or equivalent",
+      "gpu_rec": "Integrated Graphics or better"
+    },
+    "package_managers": [
+      { "name": "APT" },
+      { "name": "DPKG" }
+    ],
+    "architectures": [
+      { "arch_name": "x86_64" },
+      { "arch_name": "ARM AArch64" },
+      { "arch_name": "i386" },
+      { "arch_name": "PowerPC64le" },
+      { "arch_name": "s390x" }
+    ],
+    "release_models": [
+      {
+        "model_type": "Stable Release",
+        "update_frequency": "Approximately every 2 years"
+      }
+    ],
+    "categories": [
+      { "name": "Daily Use" },
+      { "name": "Development" },
+      { "name": "Education/Office" }
+    ],
+    "license": {
+      "type": "GPL and others",
+      "is_open_source": true
+    }
+  }
+  

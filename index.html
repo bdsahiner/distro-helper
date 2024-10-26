@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distro Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Find Your Perfect Linux Distribution</h1>
+    
+    <section id="questions">
+        <h2>What will you use the distro for?</h2>
+        <div id="purpose" class="question">
+            <label><input type="checkbox" value="Server" /> Server and Enterprise</label>
+            <label><input type="checkbox" value="Daily Use" /> Daily Use</label>
+            <label><input type="checkbox" value="Education/Office" /> Education/Office</label>
+            <label><input type="checkbox" value="Gaming" /> Gaming</label>
+            <label><input type="checkbox" value="Development" /> Development</label>
+            <label><input type="checkbox" value="Minimal/Lightweight" /> Minimal/Lightweight</label>
+            <label><input type="checkbox" value="Security/Isolation" /> Security/Isolation</label>
+            <label><input type="checkbox" value="Multimedia/Studio" /> Multimedia/Studio</label>
+        </div>
+        
+        <h2>Are you a beginner or experienced user?</h2>
+        <div id="experience" class="question">
+            <label><input type="radio" name="experience" value="Beginner" /> Beginner</label>
+            <label><input type="radio" name="experience" value="Experienced" /> Experienced</label>
+        </div>
+
+        <h2>How much do you like customization?</h2>
+        <div id="customization" class="question">
+            <label><input type="radio" name="customization" value="limited" /> Limited</label>
+            <label><input type="radio" name="customization" value="medium" /> Medium</label>
+            <label><input type="radio" name="customization" value="high" /> Full</label>
+        </div>
+    </section>
+
+    <section id="distros">
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

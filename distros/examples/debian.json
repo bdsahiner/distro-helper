@@ -1,0 +1,144 @@
+{
+    "name": "Debian",
+    "version": "12 (Bookworm)",
+    "base": "Independent",
+    "release_date": "2023-06-10",
+    "description": null,
+    "environments": [
+      {
+        "type": "desktop",
+        "name": "GNOME",
+        "latest_version": "43",
+        "supports_x11": true,
+        "supports_wayland": true,
+        "user_experience": "full",
+        "requirements": {
+          "ram_min_gb": 4,
+          "ram_rec_gb": 8,
+          "cpu_min": "Dual-core 2 GHz",
+          "cpu_rec": "Quad-core 2 GHz",
+          "storage_min_gb": 20,
+          "storage_rec_gb": 50,
+          "gpu_min": "Intel HD Graphics or equivalent",
+          "gpu_rec": "Dedicated GPU with 2 GB VRAM"
+        }
+      },
+      {
+        "type": "desktop",
+        "name": "KDE Plasma",
+        "latest_version": "5.27",
+        "supports_x11": true,
+        "supports_wayland": true,
+        "user_experience": "full",
+        "requirements": {
+          "ram_min_gb": 4,
+          "ram_rec_gb": 8,
+          "cpu_min": "Dual-core 2 GHz",
+          "cpu_rec": "Quad-core 2 GHz",
+          "storage_min_gb": 20,
+          "storage_rec_gb": 50,
+          "gpu_min": "Intel HD Graphics or equivalent",
+          "gpu_rec": "Dedicated GPU with 2 GB VRAM"
+        }
+      },
+      {
+        "type": "desktop",
+        "name": "XFCE",
+        "latest_version": "4.18",
+        "supports_x11": true,
+        "supports_wayland": false,
+        "user_experience": "lightweight",
+        "requirements": {
+          "ram_min_gb": 2,
+          "ram_rec_gb": 4,
+          "cpu_min": "Dual-core 1 GHz",
+          "cpu_rec": "Dual-core 2 GHz",
+          "storage_min_gb": 10,
+          "storage_rec_gb": 20,
+          "gpu_min": "Basic GPU",
+          "gpu_rec": "Intel HD Graphics or equivalent"
+        }
+      },
+      {
+        "type": "desktop",
+        "name": "LXQt",
+        "latest_version": "1.2.0",
+        "supports_x11": true,
+        "supports_wayland": false,
+        "user_experience": "lightweight",
+        "requirements": {
+          "ram_min_gb": 2,
+          "ram_rec_gb": 4,
+          "cpu_min": "Dual-core 1 GHz",
+          "cpu_rec": "Dual-core 2 GHz",
+          "storage_min_gb": 10,
+          "storage_rec_gb": 20,
+          "gpu_min": "Basic GPU",
+          "gpu_rec": "Intel HD Graphics or equivalent"
+        }
+      },
+      {
+        "type": "desktop",
+        "name": "MATE",
+        "latest_version": "1.26",
+        "supports_x11": true,
+        "supports_wayland": false,
+        "user_experience": "full",
+        "requirements": {
+          "ram_min_gb": 2,
+          "ram_rec_gb": 4,
+          "cpu_min": "Dual-core 1.5 GHz",
+          "cpu_rec": "Dual-core 2 GHz",
+          "storage_min_gb": 10,
+          "storage_rec_gb": 20,
+          "gpu_min": "Basic GPU",
+          "gpu_rec": "Intel HD Graphics or equivalent"
+        }
+      },
+      {
+        "type": "server",
+        "name": "terminal",
+        "requirements": {
+          "ram_min_gb": 1,
+          "ram_rec_gb": 2,
+          "cpu_min": "Single-core 1 GHz",
+          "cpu_rec": "Dual-core 2 GHz",
+          "storage_min_gb": 5,
+          "storage_rec_gb": 10,
+          "gpu_min": null,
+          "gpu_rec": null
+        }
+      }
+    ],
+    "package_managers": [
+      { "name": "APT" },
+      { "name": "Flatpak" }
+    ],
+    "init_systems": [
+      { "name": "systemd", "default": true }
+    ],
+    "security_models": [
+      { "name": "AppArmor", "default": true }
+    ],
+    "architectures": [
+      { "arch_name": "x86_64", "status": "primary", "manufacturer": ["AMD", "Intel"] },
+      { "arch_name": "ARM AArch64", "status": "primary", "manufacturer": ["Various ARM v8"] },
+      { "arch_name": "s390x", "status": "alternative", "manufacturer": ["IBM"] },
+      { "arch_name": "PowerPC64le", "status": "alternative", "manufacturer": ["IBM"] },
+      { "arch_name": "RISC-V", "status": "alternative", "manufacturer": ["Various RISC-V Vendors"] },
+      { "arch_name": "MIPS-64el", "status": "alternative", "manufacturer": ["Cavium", "Loongson"] },
+      { "arch_name": "MIPS-el", "status": "alternative", "manufacturer": ["Cavium", "Loongson"] }
+    ],
+    "release_models": [
+      {
+        "model_type": "Stable Release",
+        "update_frequency": "Every 2 years"
+      }
+    ],
+    "categories": ["Universal", "Desktop", "Server"],
+    "license": {
+      "type": "GPL",
+      "is_open_source": true
+    }
+  }
+  

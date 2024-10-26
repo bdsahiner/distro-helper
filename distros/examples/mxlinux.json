@@ -1,0 +1,88 @@
+{
+    "name": "MX Linux",
+    "version": "23.1",
+    "base": "Debian 12.2 (Bookworm)",
+    "release_date": "2023-10-15",
+    "description": null,
+    "environments": [
+      {
+        "type": "desktop",
+        "name": "Xfce",
+        "latest_version": "4.18",
+        "supports_x11": true,
+        "supports_wayland": false,
+        "user_experience": "lightweight",
+        "requirements": {
+          "ram_min_gb": 2,
+          "ram_rec_gb": 4,
+          "cpu_min": "Dual-core 1 GHz",
+          "cpu_rec": "Dual-core 2 GHz",
+          "storage_min_gb": 10,
+          "storage_rec_gb": 20,
+          "gpu_min": null,
+          "gpu_rec": "Intel HD Graphics or equivalent"
+        }
+      },
+      {
+        "type": "desktop",
+        "name": "KDE Plasma",
+        "latest_version": "5.27",
+        "supports_x11": true,
+        "supports_wayland": true,
+        "user_experience": "full",
+        "requirements": {
+          "ram_min_gb": 4,
+          "ram_rec_gb": 8,
+          "cpu_min": "Dual-core 2 GHz",
+          "cpu_rec": "Quad-core 2 GHz",
+          "storage_min_gb": 20,
+          "storage_rec_gb": 40,
+          "gpu_min": "Intel HD Graphics or equivalent",
+          "gpu_rec": "Dedicated GPU with 2 GB VRAM"
+        }
+      },
+      {
+        "type": "desktop",
+        "name": "Fluxbox",
+        "latest_version": "1.3.7",
+        "supports_x11": true,
+        "supports_wayland": false,
+        "user_experience": "minimal",
+        "requirements": {
+          "ram_min_gb": 1,
+          "ram_rec_gb": 2,
+          "cpu_min": "Single-core 1 GHz",
+          "cpu_rec": "Dual-core 1 GHz",
+          "storage_min_gb": 5,
+          "storage_rec_gb": 10,
+          "gpu_min": null,
+          "gpu_rec": null
+        }
+      }
+    ],
+    "package_managers": [
+      { "name": "APT" },
+      { "name": "Flatpak" }
+    ],
+    "init_systems": [
+      { "name": "sysVinit", "default": true },
+      { "name": "systemd", "default": false }
+    ],
+    "security_models": "none",
+    "architectures": [
+      { "arch_name": "x86_64", "default": true },
+      { "arch_name": "32-bit", "default": false }
+    ],
+    "release_models": [
+      {
+        "model_type": "Regular Release",
+        "update_frequency": "Based on Debian Stable updates"
+      }
+    ],
+    "categories": ["Lightweight", "User-Friendly", "Desktop"],
+    "license": {
+      "type": "GPL",
+      "is_open_source": true
+    }
+  }
+  

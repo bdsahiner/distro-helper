@@ -1,0 +1,72 @@
+{
+    "name": "Linux Mint",
+    "version": "21.2",
+    "base": "Ubuntu",
+    "release_date": "2023-07-01",
+    "variants": [
+      {
+        "name": "Linux Mint Cinnamon",
+        "type": "Desktop",
+        "desktop_environment": {
+          "name": "Cinnamon",
+          "latest_version": "5.8",
+          "customization_allowance": "high",
+          "display_protocols": ["X11"]
+        },
+        "requirements": {
+          "ram_min_gb": 2,
+          "ram_rec_gb": 4,
+          "cpu_min": "Dual-core 1 GHz",
+          "cpu_rec": "Dual-core 2 GHz",
+          "storage_min_gb": 20,
+          "storage_rec_gb": 50,
+          "gpu_min": "Intel HD Graphics or equivalent"
+        },
+        "categories": [
+          { "name": "Daily Use" },
+          { "name": "Education/Office" }
+        ]
+      },
+      {
+        "name": "Linux Mint MATE",
+        "type": "Desktop",
+        "desktop_environment": {
+          "name": "MATE",
+          "latest_version": "1.26",
+          "customization_allowance": "medium",
+          "display_protocols": ["X11"]
+        },
+        "requirements": {
+          "ram_min_gb": 2,
+          "ram_rec_gb": 4,
+          "cpu_min": "Dual-core 1 GHz",
+          "cpu_rec": "Dual-core 2 GHz",
+          "storage_min_gb": 20,
+          "storage_rec_gb": 40,
+          "gpu_min": "Intel HD Graphics or equivalent"
+        },
+        "categories": [
+          { "name": "Minimal/Lightweight" },
+          { "name": "Daily Use" }
+        ]
+      }
+    ],
+    "package_managers": [
+      { "name": "APT" },
+      { "name": "Flatpak" }
+    ],
+    "architectures": [
+      { "arch_name": "x86_64" }
+    ],
+    "release_models": [
+      {
+        "model_type": "Regular Release",
+        "update_frequency": "Every 6 months"
+      }
+    ],
+    "license": {
+      "type": "GPL",
+      "is_open_source": true
+    }
+  }
+  

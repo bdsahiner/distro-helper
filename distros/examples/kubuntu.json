@@ -1,0 +1,53 @@
+{
+  "name": "Kubuntu",
+  "version": "24.04 LTS",
+  "base": "Ubuntu",
+  "release_date": "2024-04-25",
+  "description": null,
+  "environments": [
+    {
+      "type": "desktop",
+      "name": "KDE Plasma",
+      "latest_version": "5.27",
+      "supports_x11": true,
+      "supports_wayland": true,
+      "user_experience": "full",
+      "requirements": {
+        "ram_min_gb": 4,
+        "ram_rec_gb": 8,
+        "cpu_min": "Dual-core 2 GHz",
+        "cpu_rec": "Quad-core 2 GHz",
+        "storage_min_gb": 25,
+        "storage_rec_gb": 50,
+        "gpu_min": "Intel HD Graphics or equivalent",
+        "gpu_rec": "Dedicated GPU with 2 GB VRAM"
+      }
+    }
+  ],
+  "package_managers": [
+    { "name": "APT" },
+    { "name": "Snap" }
+  ],
+  "init_systems": [
+    { "name": "systemd", "default": true }
+  ],
+  "security_models": [
+    { "name": "AppArmor", "default": true }
+  ],
+  "architectures": [
+    { "arch_name": "x86_64", "default": true },
+    { "arch_name": "ARM64", "default": false }
+  ],
+  "release_models": [
+    {
+      "model_type": "LTS",
+      "update_frequency": "Every 2 years"
+    }
+  ],
+  "categories": ["User-Friendly", "Desktop"],
+  "license": {
+    "type": "GPL",
+    "is_open_source": true
+  }
+}
+

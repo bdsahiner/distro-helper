@@ -1,0 +1,47 @@
+{
+    "name": "Arch Linux",
+    "version": "Rolling Release",
+    "base": "Independent",
+    "release_date": "Continuous",
+    "desktop_environment": {
+      "name": "Deepin Desktop",
+      "latest_version": "Rolling",
+      "customization_allowance": "limited",
+      "x11_support": true,
+      "wayland_support": false
+    },
+    "requirements": {
+      "ram_min_gb": 4,
+      "ram_rec_gb": 8,
+      "cpu_min": "Dual-core 2 GHz",
+      "cpu_rec": "Quad-core 2 GHz",
+      "storage_min_gb": 20,
+      "storage_rec_gb": 40,
+      "gpu_min": "Intel HD Graphics or equivalent",
+      "gpu_rec": "Integrated Graphics or better"
+    },
+    "package_managers": [
+      { "name": "Pacman" },
+      { "name": "AUR" }
+    ],
+    "architectures": [
+      { "arch_name": "x86_64" },
+      { "arch_name": "ARM AArch64" }
+    ],
+    "release_models": [
+      {
+        "model_type": "Rolling Release",
+        "update_frequency": "Continuous"
+      }
+    ],
+    "categories": [
+      { "name": "Daily Use" },
+      { "name": "Education/Office" },
+      { "name": "Multimedia/Studio" }
+    ],
+    "license": {
+      "type": "GPL and others",
+      "is_open_source": true
+    }
+  }
+  

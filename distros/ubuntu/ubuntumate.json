@@ -1,0 +1,45 @@
+{
+    "name": "Ubuntu MATE",
+    "version": "24.04 LTS",
+    "base": "Ubuntu",
+    "release_date": "2024-04-25",
+    "desktop_environment": {
+      "name": "MATE",
+      "latest_version": "1.28",
+      "customization_allowance": "limited"
+    },
+    "requirements": {
+      "ram_min_gb": 4,
+      "ram_rec_gb": 8,
+      "cpu_min": "Dual-core 2 GHz",
+      "cpu_rec": "Quad-core 2 GHz",
+      "storage_min_gb": 25,
+      "storage_rec_gb": 50,
+      "gpu_min": "Intel HD Graphics or equivalent",
+      "gpu_rec": "Dedicated GPU with 2 GB VRAM"
+    },
+    "package_managers": [
+      { "name": "APT" },
+      { "name": "Snap" }
+    ],
+    "architectures": [
+      { "arch_name": "x86_64" },
+      { "arch_name": "ARM AArch64" }
+    ],
+    "release_models": [
+      {
+        "model_type": "LTS Release",
+        "update_frequency": "Every 2 years"
+      }
+    ],
+    "categories": [
+      { "name": "Daily Use" },
+      { "name": "Education/Office" },
+      { "name": "Development" }
+    ],
+    "license": {
+      "type": "GPL and others",
+      "is_open_source": true
+    }
+  }
+  

@@ -1,0 +1,320 @@
+-- Table for Linux Distributions
+CREATE TABLE distros (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    version TEXT,
+    base TEXT,
+    release_date DATE,
+    description TEXT
+);
+
+-- Table for Desktop Environments
+CREATE TABLE desktop_environments (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    default_on_distro BOOLEAN DEFAULT 0,
+    latest_version TEXT,
+    supported_on_distros INTEGER,
+    FOREIGN KEY (supported_on_distros) REFERENCES distros(id)
+);
+
+-- Table for Package Managers
+CREATE TABLE package_managers (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    distro_id INTEGER,
+    supports_flavors TEXT,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Initialization Systems
+CREATE TABLE init_systems (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    distro_id INTEGER,
+    default_on_distro BOOLEAN DEFAULT 0,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Security Models
+CREATE TABLE security_models (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    distro_id INTEGER,
+    is_default BOOLEAN DEFAULT 0,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Supported Architectures
+CREATE TABLE architectures (
+    id INTEGER PRIMARY KEY,
+    arch_name TEXT NOT NULL,
+    distro_id INTEGER,
+    is_default_arch BOOLEAN DEFAULT 0,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Release Models
+CREATE TABLE release_models (
+    id INTEGER PRIMARY KEY,
+    model_type TEXT NOT NULL,
+    distro_id INTEGER,
+    update_frequency TEXT,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Kernel Versions
+CREATE TABLE kernel_versions (
+    id INTEGER PRIMARY KEY,
+    kernel_version TEXT NOT NULL,
+    distro_id INTEGER,
+    default_kernel BOOLEAN DEFAULT 0,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Repositories
+CREATE TABLE repositories (
+    id INTEGER PRIMARY KEY,
+    repo_url TEXT NOT NULL,
+    distro_id INTEGER,
+    is_default_repo BOOLEAN DEFAULT 0,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Community Support
+CREATE TABLE community_support (
+    id INTEGER PRIMARY KEY,
+    support_type TEXT NOT NULL,
+    url TEXT,
+    distro_id INTEGER,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Supported Languages
+CREATE TABLE supported_languages (
+    id INTEGER PRIMARY KEY,
+    language TEXT NOT NULL,
+    distro_id INTEGER,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Distro Categories
+CREATE TABLE distro_categories (
+    id INTEGER PRIMARY KEY,
+    category TEXT NOT NULL,
+    distro_id INTEGER,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Licensing Information
+CREATE TABLE license_types (
+    id INTEGER PRIMARY KEY,
+    license TEXT NOT NULL,
+    distro_id INTEGER,
+    is_open_source BOOLEAN DEFAULT 1,
+    FOREIGN KEY (distro_id) REFERENCES distros(id)
+);
+
+-- Table for Minimum/Recommended System Requirements
+CREATE TABLE system_requirements (
+    id INTEGER PRIMARY KEY,
+    distro_id INTEGER,
+    desktop_env_id INTEGER NULL,
+    ram_min_gb REAL,
+    ram_rec_gb REAL,
+    cpu_min TEXT,
+    cpu_rec TEXT,
+    storage_min_gb REAL,
+    storage_rec_gb REAL,
+    gpu_min TEXT,
+    gpu_rec TEXT,
+    other_requirements TEXT,
+    FOREIGN KEY (distro_id) REFERENCES distros(id),
+    FOREIGN KEY (desktop_env_id) REFERENCES desktop_environments(id)
+);
+---------------------------------------------------------------------------------------------------------------------
+{
+  "distro": {
+    "id": 1,
+    "name": "Ubuntu",
+    "version": "22.04 LTS",
+    "base": "Debian",
+    "release_date": "2022-04-21",
+    "description": "Ubuntu is a popular open-source Linux distribution based on Debian, known for its user-friendliness and robust community support."
+  },
+  "desktop_environments": [
+    {
+      "id": 1,
+      "name": "GNOME",
+      "default_on_distro": true,
+      "latest_version": "42",
+      "supported_on_distros": 1
+    },
+    {
+      "id": 2,
+      "name": "KDE Plasma",
+      "default_on_distro": false,
+      "latest_version": "5.25",
+      "supported_on_distros": 1
+    }
+  ],
+  "package_managers": [
+    {
+      "id": 1,
+      "name": "APT",
+      "distro_id": 1,
+      "supports_flavors": "Snap, Flatpak, AppImage"
+    }
+  ],
+  "init_systems": [
+    {
+      "id": 1,
+      "name": "systemd",
+      "distro_id": 1,
+      "default_on_distro": true
+    }
+  ],
+  "security_models": [
+    {
+      "id": 1,
+      "name": "AppArmor",
+      "distro_id": 1,
+      "is_default": true
+    }
+  ],
+  "architectures": [
+    {
+      "id": 1,
+      "arch_name": "x86_64",
+      "distro_id": 1,
+      "is_default_arch": true
+    },
+    {
+      "id": 2,
+      "arch_name": "ARM64",
+      "distro_id": 1,
+      "is_default_arch": false
+    }
+  ],
+  "release_models": [
+    {
+      "id": 1,
+      "model_type": "LTS",
+      "distro_id": 1,
+      "update_frequency": "Every 2 years"
+    }
+  ],
+  "kernel_versions": [
+    {
+      "id": 1,
+      "kernel_version": "5.15",
+      "distro_id": 1,
+      "default_kernel": true
+    }
+  ],
+  "repositories": [
+    {
+      "id": 1,
+      "repo_url": "http://archive.ubuntu.com/ubuntu/",
+      "distro_id": 1,
+      "is_default_repo": true
+    }
+  ],
+  "community_support": [
+    {
+      "id": 1,
+      "support_type": "Forum",
+      "url": "https://ubuntuforums.org/",
+      "distro_id": 1
+    },
+    {
+      "id": 2,
+      "support_type": "IRC",
+      "url": "irc://irc.libera.chat/ubuntu",
+      "distro_id": 1
+    },
+    {
+      "id": 3,
+      "support_type": "Mailing List",
+      "url": "https://lists.ubuntu.com/",
+      "distro_id": 1
+    }
+  ],
+  "supported_languages": [
+    {
+      "id": 1,
+      "language": "English",
+      "distro_id": 1
+    },
+    {
+      "id": 2,
+      "language": "Spanish",
+      "distro_id": 1
+    },
+    {
+      "id": 3,
+      "language": "French",
+      "distro_id": 1
+    }
+  ],
+  "distro_categories": [
+    {
+      "id": 1,
+      "category": "User-Friendly",
+      "distro_id": 1
+    },
+    {
+      "id": 2,
+      "category": "Desktop",
+      "distro_id": 1
+    },
+    {
+      "id": 3,
+      "category": "Server",
+      "distro_id": 1
+    }
+  ],
+  "cloud_support": [
+    {
+      "id": 1,
+      "platform": "AWS",
+      "distro_id": 1,
+      "has_official_image": true
+    },
+    {
+      "id": 2,
+      "platform": "Azure",
+      "distro_id": 1,
+      "has_official_image": true
+    },
+    {
+      "id": 3,
+      "platform": "Docker",
+      "distro_id": 1,
+      "has_official_image": true
+    }
+  ],
+  "license_types": [
+    {
+      "id": 1,
+      "license": "GPL",
+      "distro_id": 1,
+      "is_open_source": true
+    }
+  ],
+  "system_requirements": {
+    "id": 1,
+    "distro_id": 1,
+    "desktop_env_id": 1,
+    "ram_min_gb": 4.0,
+    "ram_rec_gb": 8.0,
+    "cpu_min": "Dual-core 2 GHz or better",
+    "cpu_rec": "Quad-core 2 GHz or better",
+    "storage_min_gb": 25.0,
+    "storage_rec_gb": 50.0,
+    "gpu_min": "Intel HD Graphics or equivalent",
+    "gpu_rec": "Dedicated GPU with 2 GB VRAM",
+    "other_requirements": "UEFI, Internet access for installation"
+  }
+}
+
