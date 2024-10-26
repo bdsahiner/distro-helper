@@ -1,191 +1,199 @@
 {
-    "name": "Arch Linux",
-    "version": "Rolling",
-    "base": "Independent",
-    "release_date": "N/A",
-    "variants": [
-      {
-        "name": "Arch GNOME",
-        "type": "Desktop",
-        "desktop_environment": {
-          "name": "GNOME",
-          "latest_version": "46",
-          "customization_allowance": "limited",
-          "display_protocols": ["Wayland", "X11"]
-        },
-        "requirements": {
-          "ram_min_gb": 4,
-          "ram_rec_gb": 8,
-          "cpu_min": "Dual-core 2 GHz",
-          "cpu_rec": "Quad-core 2 GHz",
-          "storage_min_gb": 20,
-          "storage_rec_gb": 50,
-          "gpu_min": "Intel HD Graphics or equivalent",
-          "gpu_rec": "Dedicated GPU with 2 GB VRAM"
-        },
-        "categories": [
-          { "name": "Daily Use" },
-          { "name": "Development" }
-        ]
+  "name": "Debian",
+  "version": "12",
+  "base": "Independent",
+  "release_date": "2023-06-10",
+  "variants": [
+    {
+      "name": "Debian GNOME",
+      "type": "Desktop",
+      "desktop_environment": {
+        "name": "GNOME",
+        "latest_version": "43",
+        "customization_allowance": "limited",
+        "display_protocols": ["Wayland", "X11"]
       },
-      {
-        "name": "Arch KDE Plasma",
-        "type": "Desktop",
-        "desktop_environment": {
-          "name": "KDE Plasma",
-          "latest_version": "5.27",
-          "customization_allowance": "high",
-          "display_protocols": ["Wayland", "X11"]
-        },
-        "requirements": {
-          "ram_min_gb": 4,
-          "ram_rec_gb": 8,
-          "cpu_min": "Dual-core 2 GHz",
-          "cpu_rec": "Quad-core 2 GHz",
-          "storage_min_gb": 25,
-          "storage_rec_gb": 60,
-          "gpu_min": "Intel HD Graphics or equivalent",
-          "gpu_rec": "Dedicated GPU with 2 GB VRAM"
-        },
-        "categories": [
-          { "name": "Multimedia/Studio" },
-          { "name": "Gaming" }
-        ]
+      "requirements": {
+        "ram_min_gb": 4,
+        "ram_rec_gb": 8,
+        "cpu_min": "Dual-core 2 GHz",
+        "cpu_rec": "Quad-core 2 GHz",
+        "storage_min_gb": 25,
+        "storage_rec_gb": 50,
+        "gpu_min": "Intel HD Graphics or equivalent",
+        "gpu_rec": "Dedicated GPU with 2 GB VRAM"
       },
-      {
-        "name": "Arch Xfce",
-        "type": "Desktop",
-        "desktop_environment": {
-          "name": "Xfce",
-          "latest_version": "4.18",
-          "customization_allowance": "medium",
-          "display_protocols": ["X11"]
-        },
-        "requirements": {
-          "ram_min_gb": 2,
-          "ram_rec_gb": 4,
-          "cpu_min": "Dual-core 1 GHz",
-          "cpu_rec": "Dual-core 2 GHz",
-          "storage_min_gb": 10,
-          "storage_rec_gb": 20,
-          "gpu_min": "Intel HD Graphics or equivalent"
-        },
-        "categories": [
-          { "name": "Minimal/Lightweight" },
-          { "name": "Daily Use" }
-        ]
+      "categories": [
+        { "name": "Daily Use" },
+        { "name": "Development" }
+      ]
+    },
+    {
+      "name": "Debian KDE Plasma",
+      "type": "Desktop",
+      "desktop_environment": {
+        "name": "KDE Plasma",
+        "latest_version": "5.27",
+        "customization_allowance": "high",
+        "display_protocols": ["Wayland", "X11"]
       },
-      {
-        "name": "Arch LXDE",
-        "type": "Desktop",
-        "desktop_environment": {
-          "name": "LXDE",
-          "latest_version": "0.99",
-          "customization_allowance": "medium",
-          "display_protocols": ["X11"]
-        },
-        "requirements": {
-          "ram_min_gb": 2,
-          "ram_rec_gb": 4,
-          "cpu_min": "Dual-core 1 GHz",
-          "cpu_rec": "Dual-core 2 GHz",
-          "storage_min_gb": 10,
-          "storage_rec_gb": 20,
-          "gpu_min": "Intel HD Graphics or equivalent"
-        },
-        "categories": [
-          { "name": "Minimal/Lightweight" },
-          { "name": "Daily Use" }
-        ]
+      "requirements": {
+        "ram_min_gb": 4,
+        "ram_rec_gb": 8,
+        "cpu_min": "Dual-core 2 GHz",
+        "cpu_rec": "Quad-core 2 GHz",
+        "storage_min_gb": 30,
+        "storage_rec_gb": 60,
+        "gpu_min": "Intel HD Graphics or equivalent",
+        "gpu_rec": "Dedicated GPU with 2 GB VRAM"
       },
-      {
-        "name": "Arch LXQt",
-        "type": "Desktop",
-        "desktop_environment": {
-          "name": "LXQt",
-          "latest_version": "1.3",
-          "customization_allowance": "medium",
-          "display_protocols": ["X11"]
-        },
-        "requirements": {
-          "ram_min_gb": 2,
-          "ram_rec_gb": 4,
-          "cpu_min": "Dual-core 1 GHz",
-          "cpu_rec": "Dual-core 2 GHz",
-          "storage_min_gb": 10,
-          "storage_rec_gb": 20,
-          "gpu_min": "Intel HD Graphics or equivalent"
-        },
-        "categories": [
-          { "name": "Minimal/Lightweight" },
-          { "name": "Daily Use" }
-        ]
+      "categories": [
+        { "name": "Multimedia/Studio" },
+        { "name": "Gaming" }
+      ]
+    },
+    {
+      "name": "Debian Xfce",
+      "type": "Desktop",
+      "desktop_environment": {
+        "name": "Xfce",
+        "latest_version": "4.18",
+        "customization_allowance": "medium",
+        "display_protocols": ["X11"]
       },
-      {
-        "name": "Arch MATE",
-        "type": "Desktop",
-        "desktop_environment": {
-          "name": "MATE",
-          "latest_version": "1.26",
-          "customization_allowance": "medium",
-          "display_protocols": ["X11"]
-        },
-        "requirements": {
-          "ram_min_gb": 4,
-          "ram_rec_gb": 8,
-          "cpu_min": "Dual-core 2 GHz",
-          "cpu_rec": "Quad-core 2 GHz",
-          "storage_min_gb": 20,
-          "storage_rec_gb": 40,
-          "gpu_min": "Intel HD Graphics or equivalent"
-        },
-        "categories": [
-          { "name": "Daily Use" },
-          { "name": "Development" }
-        ]
+      "requirements": {
+        "ram_min_gb": 2,
+        "ram_rec_gb": 4,
+        "cpu_min": "Dual-core 1 GHz",
+        "cpu_rec": "Dual-core 2 GHz",
+        "storage_min_gb": 10,
+        "storage_rec_gb": 20,
+        "gpu_min": "Intel HD Graphics or equivalent"
       },
-      {
-        "name": "Arch Server",
-        "type": "Server",
-        "desktop_environment": {
-          "name": "None",
-          "latest_version": "N/A",
-          "customization_allowance": "N/A",
-          "display_protocols": ["None"]
-        },
-        "requirements": {
-          "ram_min_gb": 1,
-          "ram_rec_gb": 2,
-          "cpu_min": "Single-core 1 GHz",
-          "cpu_rec": "Dual-core 2 GHz",
-          "storage_min_gb": 5,
-          "storage_rec_gb": 20,
-          "gpu_min": "None required"
-        },
-        "categories": [
-          { "name": "Server and Enterprise" },
-          { "name": "Security/Isolation" }
-        ]
-      }
-    ],
-    "package_managers": [
-      { "name": "Pacman" },
-      { "name": "AUR (Arch User Repository)" },
-      { "name": "Flatpak" }
-    ],
-    "architectures": [
-      { "arch_name": "x86_64" },
-      { "arch_name": "ARM AArch64" }
-    ],
-    "release_models": [
-      {
-        "model_type": "Rolling Release",
-        "update_frequency": "Continuous"
-      }
-    ],
-    "license": {
-      "type": "GPL",
-      "is_open_source": true
+      "categories": [
+        { "name": "Minimal/Lightweight" },
+        { "name": "Daily Use" }
+      ]
+    },
+    {
+      "name": "Debian LXDE",
+      "type": "Desktop",
+      "desktop_environment": {
+        "name": "LXDE",
+        "latest_version": "0.99",
+        "customization_allowance": "medium",
+        "display_protocols": ["X11"]
+      },
+      "requirements": {
+        "ram_min_gb": 2,
+        "ram_rec_gb": 4,
+        "cpu_min": "Dual-core 1 GHz",
+        "cpu_rec": "Dual-core 2 GHz",
+        "storage_min_gb": 10,
+        "storage_rec_gb": 20,
+        "gpu_min": "Intel HD Graphics or equivalent"
+      },
+      "categories": [
+        { "name": "Minimal/Lightweight" },
+        { "name": "Daily Use" }
+      ]
+    },
+    {
+      "name": "Debian LXQt",
+      "type": "Desktop",
+      "desktop_environment": {
+        "name": "LXQt",
+        "latest_version": "1.3",
+        "customization_allowance": "medium",
+        "display_protocols": ["X11"]
+      },
+      "requirements": {
+        "ram_min_gb": 2,
+        "ram_rec_gb": 4,
+        "cpu_min": "Dual-core 1 GHz",
+        "cpu_rec": "Dual-core 2 GHz",
+        "storage_min_gb": 10,
+        "storage_rec_gb": 20,
+        "gpu_min": "Intel HD Graphics or equivalent"
+      },
+      "categories": [
+        { "name": "Minimal/Lightweight" },
+        { "name": "Daily Use" }
+      ]
+    },
+    {
+      "name": "Debian MATE",
+      "type": "Desktop",
+      "desktop_environment": {
+        "name": "MATE",
+        "latest_version": "1.26",
+        "customization_allowance": "medium",
+        "display_protocols": ["X11"]
+      },
+      "requirements": {
+        "ram_min_gb": 4,
+        "ram_rec_gb": 8,
+        "cpu_min": "Dual-core 2 GHz",
+        "cpu_rec": "Quad-core 2 GHz",
+        "storage_min_gb": 20,
+        "storage_rec_gb": 40,
+        "gpu_min": "Intel HD Graphics or equivalent"
+      },
+      "categories": [
+        { "name": "Daily Use" },
+        { "name": "Development" }
+      ]
+    },
+    {
+      "name": "Debian Server",
+      "type": "Server",
+      "desktop_environment": {
+        "name": "None",
+        "latest_version": "N/A",
+        "customization_allowance": "N/A",
+        "display_protocols": ["None"]
+      },
+      "requirements": {
+        "ram_min_gb": 1,
+        "ram_rec_gb": 2,
+        "cpu_min": "Single-core 1 GHz",
+        "cpu_rec": "Dual-core 2 GHz",
+        "storage_min_gb": 5,
+        "storage_rec_gb": 20,
+        "gpu_min": "None required"
+      },
+      "categories": [
+        { "name": "Server and Enterprise" },
+        { "name": "Security/Isolation" }
+      ]
     }
+  ],
+  "package_managers": [
+    { "name": "APT" },
+    { "name": "Flatpak" }
+  ],
+  "architectures": [
+    { "arch_name": "x86_64" },
+    { "arch_name": "ARM AArch64" },
+    { "arch_name": "PowerPC64le" },
+    { "arch_name": "s390x" }
+  ],
+  "release_models": [
+    {
+      "model_type": "Stable",
+      "update_frequency": "Every 2-3 years"
+    },
+    {
+      "model_type": "Testing",
+      "update_frequency": "Rolling"
+    },
+    {
+      "model_type": "Unstable",
+      "update_frequency": "Rolling"
+    }
+  ],
+  "license": {
+    "type": "GPL",
+    "is_open_source": true
   }
-  
+}
